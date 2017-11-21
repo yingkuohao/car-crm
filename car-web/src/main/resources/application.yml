@@ -7,7 +7,13 @@ spring:
       timeout: 2000
       maxTotal: 50
       maxIdle: 5
-
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
 
 ##spring boot服务端口
 server:
@@ -22,6 +28,7 @@ multipart:
     
 mybatis:
   configuration:
-    mapUnderscoreToCamelCase: true 
+    mapUnderscoreToCamelCase: true
 
-
+welcome:
+  message: Hello, Spring Boot

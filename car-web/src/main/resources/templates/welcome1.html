@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>car-crm系统</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css"
+    href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+<link rel="stylesheet" th:href="@{/css/main.css}"
+    href="../../css/main.css" />
+
+</head>
+
+
+ <nav class="navbar navbar-inverse" role="navigation">
+     <div class="container-fluid">
+     <div class="navbar-header">
+         <a class="navbar-brand" href="#">菜鸟教程</a>
+     </div>
+     <div>
+         <ul class="nav navbar-nav">
+             <li class="active"><a href="#">iOS</a></li>
+             <li><a href="#">SVN</a></li>
+             <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                     Java <b class="caret"></b>
+                 </a>
+                 <ul class="dropdown-menu">
+                     <li><a href="#">jmeter</a></li>
+                     <li><a href="#">EJB</a></li>
+                     <li><a href="#">Jasper Report</a></li>
+                     <li class="divider"></li>
+                     <li><a href="#">分离的链接</a></li>
+                     <li class="divider"></li>
+                     <li><a href="#">另一个分离的链接</a></li>
+                 </ul>
+             </li>
+         </ul>
+     </div>
+     </div>
+ </nav>
+<!--<div class="container">
+  <h2>带下拉菜单的胶囊式标签页</h2>
+  <ul class="nav nav-pills" role="tablist">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+      教程 <span class="caret"></span></a>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>-->
+<!--
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">CAR</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+     &lt;!&ndash;           <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="#about">关于</a></li>
+                </ul>&ndash;&gt;
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-file"></span> 基础数据
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+    						<li><a href="#">游戏管理</a></li>
+                            <li><a href="#">游戏奖组管理</a></li>
+    						<li class="divider"></li>
+                            <li><a href="$request.contextPath/warehouseManage">仓库管理</a></li>
+    						<li><a href="$request.contextPath/channel/query">渠道管理</a></li>
+    						<li class="divider"></li>
+    						<li><a href="$request.contextPath/cr/crManage">中心资源管理</a></li>
+                        </ul>
+                    </li>
+    				<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-th-large"></span> 业务运营
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="$request.contextPath/box/query">箱管理</a></li>
+                            <li><a href="$request.contextPath/pack/query">包管理</a></li>
+    						<li><a href="$request.contextPath/pack/query">包激活数据导入</a></li>
+    						<li class="divider"></li>
+                            <li><a href="$request.contextPath/storageTransferOrder/query">仓储转移单管理</a></li>
+                            <li><a href="$request.contextPath/transportdoc/index">运输文件管理</a></li>
+    						<li><a href="$request.contextPath/operateTask/query">运营任务</a></li>
+    						<li class="divider"></li>
+    						<li><a href="$request.contextPath/account/remainder/query">SR账户余额查询</a></li>
+    						<li><a href="$request.contextPath/award/awardManage">兑奖信息查询</a></li>
+                            <li><a href="$request.contextPath/award/returnAwardStatistics">返奖三方对账统计</a></li>
+                        </ul>
+                    </li>
+    				<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-list-alt"></span> 统计分析
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="$request.contextPath/pack/queryPackGroup">仓储统计</a></li>
+                            <li><a href="$request.contextPath/sale/saleBillQuery">销售总账统计(http)</a></li>
+                            <li><a href="$request.contextPath/storageTransferOrder/queryGroupOrder">仓库转移单统计</a></li>
+                            <li><a href="$request.contextPath/report/awardReport">财务报表统计</a></li>
+                        </ul>
+                    </li>
+    				<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-lock"></span> 系统管理
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="$request.contextPath/jcooper/index.htm">Jcooper管理</a></li>
+                            <li><a href="$request.contextPath/jkcCache/query">缓存管理</a></li>
+    						<li><a target="_blank " href="$request.contextPath/tianjing/index.htm">天镜</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span> 权限管理
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+    						<li><a href="$request.contextPath/channelAccount/query">渠道系统账号管理</a></li>
+    						<li class="divider"></li>
+    						<li><a href="$request.contextPath/userManage">用户管理</a></li>
+                            <li><a href="$request.contextPath/userGroupManage">角色管理</a></li>
+                            <li><a href="$request.contextPath/authfunc/query">功能管理</a></li>
+    						<li><a href="$request.contextPath/operationLog/query">操作日志</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav" style="float: right;">
+                <li class="dropdown" style="float: right;">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span>$!loginUser.userName
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" onclick="javascript:jBoxConfirm('$request.contextPath/outLogin','您确定退出吗？');">退出登录</a></li>
+                        <li><a href="#" onclick="reloadUser()">刷新权限</a></li>
+                       #* <li><a href="#" data-toggle="modal"
+                               data-target="#updatePasswordModal">修改密码</a></li>*#
+                    </ul>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+-->
+
+    <div class="container">
+
+        <div class="starter-template">
+            <h1>Spring Boot Web Thymeleaf示例</h1>
+            <h2>
+                <span th:text="'Message: ' + ${message}"></span>
+            </h2>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <script type="text/javascript"
+        src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
