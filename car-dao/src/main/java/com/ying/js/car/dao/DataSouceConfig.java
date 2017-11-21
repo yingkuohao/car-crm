@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
  * User: chengjing
  * Date: 16/10/31
  * Time: 上午10:16
- * CopyRight: taobao
+ * CopyRight: ying
  * Descrption:
  */
 //解决 spring.datasource.filters=stat,wall,log4j 无法正常注册进去

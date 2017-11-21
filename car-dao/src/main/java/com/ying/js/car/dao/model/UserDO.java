@@ -5,7 +5,7 @@ package com.ying.js.car.dao.model;
  * User: chengjing
  * Date: 17/11/21
  * Time: 上午10:36
- * CopyRight: taobao
+ * CopyRight: ying
  * Descrption:
  */
 

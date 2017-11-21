@@ -7,8 +7,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
- * 村淘服务启动类
- * @author risheng
+ * 服务启动类
+ * @author ying
  */
 @EnableAutoConfiguration
 @ComponentScan({"com.ying"})

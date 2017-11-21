@@ -28,7 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * User: chengjing
  * Date: 17/11/14
  * Time: 下午1:53
- * CopyRight: taobao
+ * CopyRight: ying
  * Descrption:
  */
 @RunWith(SpringRunner.class)

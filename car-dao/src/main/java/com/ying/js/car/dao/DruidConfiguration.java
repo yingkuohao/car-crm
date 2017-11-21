@@ -21,7 +21,7 @@ import java.sql.SQLException;
  * User: chengjing
  * Date: 17/11/14
  * Time: 下午2:10
- * CopyRight: taobao
+ * CopyRight: ying
  * Descrption:
  */
 @Configuration
