@@ -1,256 +1,110 @@
-<!DOCTYPE html>
+<!-- 导航菜单 -->
 
-<html xmlns:th="http://www.thymeleaf.org">
-
-<body>
-
-     <header class="topnavbar-wrapper" th:fragment="header">
-
-      <nav class="navbar topnavbar" role="navigation">
-
-         <div class="navbar-header">
-
-            <a class="navbar-brand" href="/index">
-
-               <div class="brand-logo">
-
-                  <img class="img-responsive" alt="App Logo" th:src="@{/img/logo.png}"  /></div>
-
-               <div class="brand-logo-collapsed">
-
-                  <img class="img-responsive" alt="App Logo" th:src="@{/img/logo.png}" /></div>
-
-            </a>
-
-         </div>
-
-         <div class="nav-wrapper">
-
+<header class="topnavbar-wrapper" th:fragment="header">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/index">车辆CRM- $!env</a>
+        </div>
+        <div>
             <ul class="nav navbar-nav">
-
-               <li>
-
-                  <a title="缩小/扩大侧栏" class="hidden-xs" data-toggle-state="aside-collapsed" href="#"> <em class="fa fa-navicon"></em>
-
-                  </a>
-
-                  <a title="缩小/扩大侧栏" class="visible-xs sidebar-toggle" data-no-persist="true" data-toggle-state="aside-toggled" href="#"> <em class="fa fa-navicon"></em>
-
-                  </a>
-
-               </li>
-
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-file"></span> 基础数据
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+						<li><a href="/consumer/consumerList">用户管理</a></li>
+                        <li><a href="$request.contextPath/gameGroupAward/query">游戏奖组管理</a></li>
+						<li class="divider"></li>
+                        <li><a href="$request.contextPath/warehouseManage">仓库管理</a></li>
+						<li><a href="$request.contextPath/channel/query">渠道管理</a></li>
+						<li class="divider"></li>
+						<li><a href="$request.contextPath/cr/crManage">中心资源管理</a></li>
+                    </ul>
+                </li>
+				<li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-th-large"></span> 业务运营
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="$request.contextPath/box/query">箱管理</a></li>
+                        <li><a href="$request.contextPath/pack/query">包管理</a></li>
+						<li><a href="$request.contextPath/pack/query">包激活数据导入</a></li>
+						<li class="divider"></li>
+                        <li><a href="$request.contextPath/storageTransferOrder/query">仓储转移单管理</a></li>
+                        <li><a href="$request.contextPath/transportdoc/index">运输文件管理</a></li>
+						<li><a href="$request.contextPath/operateTask/query">运营任务</a></li>
+						<li class="divider"></li>
+						<li><a href="$request.contextPath/account/remainder/query">SR账户余额查询</a></li>
+						<li><a href="$request.contextPath/award/awardManage">兑奖信息查询</a></li>
+                        <li><a href="$request.contextPath/award/returnAwardStatistics">返奖三方对账统计</a></li>
+                    </ul>
+                </li>
+				<li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-list-alt"></span> 统计分析
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="$request.contextPath/pack/queryPackGroup">仓储统计</a></li>
+                        <li><a href="$request.contextPath/sale/saleBillQuery">销售总账统计(http)</a></li>
+                        <li><a href="$request.contextPath/storageTransferOrder/queryGroupOrder">仓库转移单统计</a></li>
+                        <li><a href="$request.contextPath/report/awardReport">财务报表统计</a></li>
+                    </ul>
+                </li>
+				<li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-lock"></span> 系统管理
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="$request.contextPath/jcooper/index.htm">Jcooper管理</a></li>
+                        <li><a href="$request.contextPath/jkcCache/query">缓存管理</a></li>
+						<li><a target="_blank " href="$request.contextPath/tianjing/index.htm">天镜</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-user"></span> 权限管理
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+						<li><a href="$request.contextPath/channelAccount/query">渠道系统账号管理</a></li>
+						<li class="divider"></li>
+						<li><a href="$request.contextPath/userManage">用户管理</a></li>
+                        <li><a href="$request.contextPath/userGroupManage">角色管理</a></li>
+                        <li><a href="$request.contextPath/authfunc/query">功能管理</a></li>
+						<li><a href="$request.contextPath/operationLog/query">操作日志</a></li>
+                    </ul>
+                </li>
             </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-
-               <li>
-
-                  <a title="搜索" data-search-open="" href="#">
-
-                     <em class="icon-magnifier"></em>
-
-                  </a>
-
-               </li>
-
-               <li class="dropdown dropdown-list">
-
-                  <a title="消息通知" data-toggle="dropdown" href="#">
-
-                     <em class="icon-bell"></em>
-
-                     <!--<div class="label label-danger" th:if="${newAtMeCount gt 0 or newCommentMeCount gt 0 or newPraiseMeCount gt 0}" th:text="${newAtMeCount}+${newCommentMeCount}+${newPraiseMeCount}"></div>-->
-                     <div class="label label-danger" id="noticeNum"></div>
-
-                  </a>
-
-                  <ul class="dropdown-menu animated flipInX">
-
-                     <li>
-
-                        <div class="list-group">
-
-                           <a class="list-group-item" href="javascript:void(0);" onclick="showNotice('at')">
-
-                              <div class="media-box">
-
-                                 <div class="pull-left">
-
-                                    <em class="fa fa-at fa-2x text-info"></em>
-
-                                 </div>
-
-                                 <div class="media-box-body clearfix">
-
-                                    <p class="m0">@我的</p>
-
-                                    <p class="m0 text-muted">
-
-                                       <small id="atMeNewNotice"></small>
-                                        <input type="hidden" id="newAtMeCount"/>
-                                    </p>
-
-                                 </div>
-
-                              </div>
-
-                           </a>
-
-                            <a class="list-group-item" href="javascript:void(0);" onclick="showNotice('comment')">
-
-                              <div class="media-box">
-
-                                 <div class="pull-left">
-
-                                    <em class="fa fa-comment fa-2x text-warning"></em>
-
-                                 </div>
-
-                                 <div class="media-box-body clearfix">
-
-                                    <p class="m0">评论我的</p>
-
-                                    <p class="m0 text-muted">
-
-                                       <small id="commentMeNewNotice"></small>
-                                       <input type="hidden" id="newCommentMeCount" />
-
-                                    </p>
-
-                                 </div>
-
-                              </div>
-
-                           </a>
-
-                            <a class="list-group-item" href="javascript:void(0);" onclick="showNotice('praise')">
-
-                              <div class="media-box">
-
-                                 <div class="pull-left">
-
-                                    <em class="fa fa-thumbs-up fa-2x text-success"></em>
-
-                                 </div>
-
-                                 <div class="media-box-body clearfix">
-
-                                    <p class="m0">赞我的</p>
-
-                                    <p class="m0 text-muted">
-
-                                       <small id="praiseMeNewNotice"></small>
-
-                                       <input id="newPraiseMeCounts" type="hidden" />
-
-                                    </p>
-
-                                 </div>
-
-                              </div>
-
-                           </a>
-
-
-                           <a class="list-group-item" href="javascript:void(0);" onclick="showNotice('letter')">                              <div class="media-box">
-
-                                 <div class="pull-left">
-
-                                    <em class="fa fa-bell fa-2x text-danger"></em>
-
-                                 </div>
-
-                                 <div class="media-box-body clearfix">
-
-                                    <p class="m0">私信我的</p>
-
-                                    <p class="m0 text-muted">
-
-                                       <!--<small>0 新消息</small>-->
-                                       <small id="newLetterNotice"></small>
-                                       <input id="newLetterNoticeCount" type="hidden" />
-                                    </p>
-
-                                 </div>
-
-                              </div>
-
-                           </a>
-
-                        </div>
-
-                     </li>
-
-                  </ul>
-
-               </li>
-
-               <li>
-
-                  <a title="浏览记录" href="javascript:void(0);" onclick="locationUrl('/lookRecord/standard/my/0','lookRecord');">
-
-                     <em class="icon-clock"></em>
-
-                  </a>
-
-               </li>
-
-               <li>
-
-                  <a title="回收站" href="javascript:void(0);" onclick="locationUrl('/standard/garbage/0','garbage');">
-
-                     <em class="icon-trash"></em>
-
-                  </a>
-
-               </li>
-
-               <li>
-
-                  <a title="设置" data-no-persist="true" data-toggle-state="offsidebar-open" href="javascript:void(0);">
-
-                     <em class="icon-settings"></em>
-
-                  </a>
-
-               </li>
-
+            <ul class="nav navbar-nav" style="float: right;">
+            <li class="dropdown" style="float: right;">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-user"></span>$!loginUser.userName
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" onclick="javascript:jBoxConfirm('$request.contextPath/outLogin','您确定退出吗？');">退出登录</a></li>
+                    <li><a href="#" onclick="reloadUser()">刷新权限</a></li>
+                   #* <li><a href="#" data-toggle="modal"
+                           data-target="#updatePasswordModal">修改密码</a></li>*#
+                </ul>
+            </li>
             </ul>
+        </div>
+    </div>
+</nav>
+<div class="row clearfix">
+    <div class="col-md-12 column">
+        <ol class="breadcrumb" style="width: 100%">
+            <li><a href="$request.contextPath/$title_href">$!title</a></li>
+            <li class="active" id="title_sub">$!title_sub</li>
+        </ol>
+    </div>
+</div>
 
-         </div>
-
-         <form class="navbar-form"  role="search">
-
-            <div class="form-group has-feedback">
-
-               <input id="searchKey" type="text" class="form-control" placeholder="输入并且按回车确定..." />
-
-               <div class="fa fa-times form-control-feedback" data-search-dismiss=""></div>
-
-            </div>
-
-            <button  class="hidden btn btn-default" type="button" >提交</button>
-
-         </form>
-
-      </nav>
-
-     <script type='text/javascript'>
-        document.onkeydown = function(e){ 
-            if(!e) e = window.event;//火狐中是 window.event 
-            if((e.keyCode || e.which) == 13){ 
-				window.event ? window.event.returnValue = false : e.preventDefault();
-	            var key=document.getElementById("searchKey").value;
-	   	    	 if(key!=''){
-	   	    	    locationUrl('/search/'+key,"");
-	   	    	 }
-            } 
-        } 
-    </script>
 
    </header>
-
-</body>
-
-</html>
