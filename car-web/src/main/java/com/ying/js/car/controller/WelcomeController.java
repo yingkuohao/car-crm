@@ -6,6 +6,7 @@ import com.ying.js.car.dao.model.UserDO;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 /**
  * Created by IntelliJ IDEA.
  * User: chengjing
@@ -18,19 +19,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class WelcomeController {
     // inject via application.properties
-      @Value("${welcome.message:test}")
-      private String message = "Hello World";
+    @Value("${welcome.message:test}")
+    private String message = "Hello World";
 
-      @RequestMapping("/")
-      public String welcome(Map<String, Object> model) {
-          UserDO userDO=new UserDO();
-          userDO.setId(1L);
-          userDO.setUserName("zhangsan");
-          userDO.setProfilePicture("img/favicon.png");
-          userDO.setIntroduction("111");
+    @Value("${spring.profiles.active}")
+    private String env;
 
-          model.put("message", this.message);
-          model.put("user", userDO);
-          return "welcome";
-      }
+    @RequestMapping("/")
+    public String welcome(Map<String, Object> model) {
+        UserDO userDO = new UserDO();
+        userDO.setId(1L);
+        userDO.setUserName("zhangsan");
+        userDO.setProfilePicture("img/favicon.png");
+        userDO.setIntroduction("111");
+
+        model.put("message", this.message);
+        model.put("env", this.env);
+        model.put("user", userDO);
+        return "welcome";
+    }
 }

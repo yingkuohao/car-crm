@@ -26,6 +26,12 @@ public class ConsumerServiceImpl implements ConsumerService {
         if (storeDO != null) {
             consumerVO.setName(storeDO.getName());
             consumerVO.setPhone(storeDO.getPhone());
+            consumerVO.setId(storeDO.getId());
+            consumerVO.setAddress(storeDO.getAddress());
+            consumerVO.setCarFrameNum(storeDO.getCarFrameNum());
+            consumerVO.setCarLicenseNum(storeDO.getCarLicenseNum());
+            consumerVO.setCarType(storeDO.getCarType());
+            consumerVO.setContent(storeDO.getContent());
         }
         return consumerVO;
     }
