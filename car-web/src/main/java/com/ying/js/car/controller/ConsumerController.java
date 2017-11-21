@@ -4,21 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import com.ying.js.car.dao.mapper.ConsumerDAO;
-import com.ying.js.car.dao.model.ConsumerDO;
 import com.ying.js.car.service.ConsumerService;
 import com.ying.js.car.service.ConsumerVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
-import org.thymeleaf.ITemplateEngine;
-import org.thymeleaf.context.WebContext;
 
 /**
  * Created by IntelliJ IDEA.

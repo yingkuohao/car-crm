@@ -1,60 +1,52 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-  <head th:fragment="htmlhead">
-    <meta charset="utf-8"></meta>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
-    <meta name="renderer" content="webkit" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-    <meta name="description" content=""></meta>
-    <meta name="author" content=""></meta>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"></meta>
-    <link rel="icon" href="/img/icon.ico" type="image/x-icon" />
-   	<title >CAR-CRM | 让车管更便捷</title>
-   	<link rel="stylesheet" th:href="@{/vendor/fontawesome/css/font-awesome.min.css}" />
-    <link rel="stylesheet" th:href="@{/vendor/simple-line-icons/css/simple-line-icons.css}"/>
-    <link rel="stylesheet" th:href="@{/vendor/animate.css/animate.min.css}"/>
-    <link rel="stylesheet" th:href="@{/vendor/toastr/toastr.min.css}"/>
-  	<link rel="stylesheet" th:href="@{/media/css/bootstrap.css}" />
-    <link rel="stylesheet" th:href="@{/media/css/app.css}" />
-    <link rel="stylesheet" th:href="@{/media/css/theme-i.css}" />
-  </head>
+<head>
+<title>car-crm系统</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-  <body class="layout-fixed">
-    <div th:fragment="navbar"  class="wrapper"  role="navigation">
-		<div th:replace="fragments/header :: header">Header</div>
-		<div th:replace="fragments/left :: left">left</div>
-		<div th:replace="fragments/sidebar :: sidebar">sidebar</div>
-		<div layout:fragment="content" id="content" ></div>
-		<div th:replace="fragments/footer :: footer">footer</div>
+<link rel="stylesheet" type="text/css"
+    href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!--注意引入顺序,先引jquery,再引bootstrap,大坑!!-->
+    <script th:src="@{webjars/jquery/1.11.1/jquery.js}"></script>
+      <script th:src="@{webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+      <script th:src="@{webjars/bootstrap/3.3.7/js/transition.js}"></script>
+
+      <script th:src="@{webjars/bootstrap/3.3.7/js/collapse.js}"></script>
+</head>
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">菜鸟教程</a>
     </div>
-	<div th:replace="fragments/alert :: alert">alert</div>
-    <script type="text/javascript" src="/webjarslocator/jquery/jquery.min.js"></script>
-    <script th:src="@{/vendor/jquery.form/jquery.form.min.js}"></script>
-	<script th:src="@{/webjars/bootstrap/3.3.6/dist/js/bootstrap.min.js}"></script>
-	<script th:src="@{/vendor/modernizr/modernizr.custom.js}" ></script>
-	<script th:src="@{/vendor/jQuery-Storage-API/jquery.storageapi.js}" ></script>
-	<script th:src="@{/media/js/app.js}" ></script>
-    <script th:src="@{/js/comm.js}" ></script>
-	<script th:src="@{/js/layout.js}" ></script>
-	<script th:src="@{/js/collect.js}" ></script>
-    <script th:src="@{/js/letter.js}" ></script>
-	<script th:src="@{/vendor/parsleyjs/dist/parsley.min.js}"></script>
-	<script th:src="@{/vendor/toastr/toastr.min.js}"></script>
-    <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=2126448" charset="utf-8"></script>
-	<script th:inline="javascript">
-	/*<![CDATA[*/
-	    var size = /*[[${size}]]*/ 0;
-	    if(size!=null && size>0){
-	    	locationUrl('/standard/my/0','home');
-		  }else{
-			  locationUrl('/tool','tool');
-		  }
-	    var config = /*[[${config}]]*/;
-		if(null != config){
-			$("#layoutConfigId").val(config.id);
-		}
-	/*]]>*/
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">iOS</a></li>
+            <li><a href="#">SVN</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Java <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">jmeter</a></li>
+                    <li><a href="#">EJB</a></li>
+                    <li><a href="#">Jasper Report</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">分离的链接</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">另一个分离的链接</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
 
-	</script>
-</body>
 </html>

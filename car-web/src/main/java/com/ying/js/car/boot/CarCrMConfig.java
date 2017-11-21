@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver;
  *
  * @author risheng
  */
-@Configuration
+//@Configuration
 //@MapperScan("com.ying")
 public class CarCrMConfig {
 
